@@ -1,36 +1,34 @@
-# Automated-Traffic-Rule-Violation-Detection-System
+# Automated Traffic Rule Violation Detection System
 
 ## Introduction
 
-The number of vehicles has increased drastically in the last few decades making it difficult to monitor each and every vehicle for traffic management and law enforcement purposes. We proposed a computer vision-based solution using deep learning that automatically detects traffic violators.
-The main objective is to detect vehicles that do not follow the rules of traffic, such as overspeeding, overloading, not wearing a helmet and running on the wrong side of the road. Yolov3 is used for object detection and DeepSort for tracking vehicles and pedestrians. The system detects the type of violation along with the vehicle information, maintains a log of violations, provides a detailed dashboard and provides alerts to the traffic police personnel. The logs can also be used for forensic purposes.
+In an era of escalating vehicle numbers, traditional methods of traffic monitoring and law enforcement struggle to keep pace. To address this challenge, we've developed a computer vision-based solution leveraging deep learning techniques. Our system autonomously identifies traffic violators, targeting offenses such as overspeeding, overloading, lack of helmet usage, and wrong-way driving. By employing YOLOv3 for object detection and DeepSort for vehicle and pedestrian tracking, we achieve comprehensive surveillance capabilities. The system not only identifies violations and captures vehicle details but also maintains a comprehensive violation log, offers an intuitive dashboard, and sends alerts to law enforcement personnel. Moreover, the collected data serves forensic purposes, enhancing accountability and law enforcement efficiency.
 
 ## Prerequisites
 
-The following dependencies must be installed in order to run the project
+Ensure the following dependencies are installed to execute the project successfully:
 
-* Python3
-* Cv2
-* Dlib
-* Imutil
-<br>
-You also need to download the YOLO weight file which is available online. 
+- Python 3
+- OpenCV (Cv2)
+- Dlib
+- Imutil
+
+Additionally, download the YOLO weight file, readily available online, for model initialization.
 
 ## Tasks Breakdown
-1. Vehicle Detection
-    - Haarcascade classifier to identify vehicles.
-2. Vehicle Tracking - ( assigning IDs to vehicles )
-    - Corelation tracker from dlib library.
-3. Speed Calculation
-    - Calculating the distance moved by the tracked vehicle 
-		  in a second, in terms of pixels, so we need pixel per meter
-		  to calculate the distance travelled in meters.
-	- With distance travelled per second in meters, we will get the 
-		  speed of the vehicle.
-4. Helmet Detection 
-     - Yolo to detect Vehicles
+
+1. **Vehicle Detection**
+    - Utilize a Haarcascade classifier for initial vehicle identification.
+2. **Vehicle Tracking (Assigning IDs)**
+    - Employ dlib's Corelation tracker for seamless vehicle tracking.
+3. **Speed Calculation**
+    - Determine vehicle speed by computing distance traveled per second in meters.
+4. **Helmet Detection**
+    - Employ YOLO for detecting helmets.
 
 ## Usage
-  - main.py is the main file
-  - python3 main.py
- 
+
+Execute the project using the `main.py` file:
+
+```bash
+python3 main.py
